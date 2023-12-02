@@ -1,31 +1,22 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-::before,
-::after {
-  box-sizing: inherit;
-}
-
 .header {
-  position: sticky;
-  display: flex;
-  justify-content: space-between;
+  padding: 10px;
 }
 
-.header__home {
-  order: 2;
+.div {
+  text-align: center;
 }
 
 .header__logo {
   height: 50px;
 }
 
+.desktop {
+  display: none;
+}
+
 .menu {
   order: 1;
   margin-top: 10px;
-  width: 50%;
 }
 
 .menu__checkbox {
@@ -48,6 +39,8 @@ html {
   text-decoration: none;
   color: white;
   padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 990px) {
@@ -55,15 +48,129 @@ html {
     display: block;
   }
 }
-@media media and (min-width: 990px) {
+@media screen and (min-width: 990px) {
   .menu__toggler {
     display: none;
   }
   .menu__list {
     display: flex;
+    justify-content: space-around;
+    background-color: white;
+    position: sticky;
   }
   .menu__item {
     border-bottom: 0;
-    border-right: 1px solid white;
+    color: #011e32;
   }
+  .menu__item:hover {
+    color: white;
+    background-color: #011e32;
+  }
+  .header {
+    padding: 0;
+  }
+  .header__logo {
+    margin: 10px;
+    height: 100px;
+  }
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  .div {
+    display: flex;
+    justify-content: center;
+  }
+}
+.fab {
+  text-decoration: none;
+  color: white;
+  margin: 8px;
+  font-size: 1.3rem;
+}
+
+.footer {
+  background-color: #011e32;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.footer p {
+  color: white;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+  gap: 40px;
+}
+@media screen and (min-width: 990px) {
+  .about {
+    flex-direction: row;
+  }
+}
+
+.profile-photo {
+  max-width: 70%;
+  border-radius: 10px;
+}
+@media screen and (min-width: 640px) and (max-width: 990px) {
+  .profile-photo {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 990px) {
+  .profile-photo {
+    max-width: 50%;
+    height: 50vh;
+  }
+}
+
+.about-me {
+  background-color: #c01007;
+  color: white;
+  padding: 20px;
+  line-height: 1.5;
+  border-radius: 10px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+}
+
+.banner {
+  background-color: #011e32;
+  color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 990px) {
+  .banner {
+    padding: 80px;
+  }
+}
+
+.red {
+  background-color: #c01007;
+}
+
+.banner__header {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

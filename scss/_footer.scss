@@ -1,0 +1,20 @@
+@use "defined";
+
+.fab {
+  text-decoration: none;
+  color: white;
+  margin: 8px;
+  font-size: 1.3rem;
+}
+
+.footer {
+  background-color: defined.$blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.footer p {
+  color: white;
+}
