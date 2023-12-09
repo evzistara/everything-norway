@@ -2,6 +2,7 @@
 @use "header";
 @use "footer";
 @use "about";
+@use "topic-page";
 
 // Break points:
 // Mobile: 640px
@@ -26,7 +27,6 @@ body {
   background-color: defined.$blue;
   color: white;
   padding: 20px;
-  margin-bottom: 30px;
 
   @media screen and (min-width: 990px) {
     padding: 80px;
@@ -38,4 +38,30 @@ body {
 }
 .banner__header {
   text-align: center;
+}
+
+.hero {
+  height: 50vh;
+  background-image: url(/images/hero-image.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.intro {
+  margin: 50px;
+  text-align: center;
+
+  @media screen and (min-width: 900px) {
+    max-width: 70%;
+    text-align: left;
+  }
+}
+
+.topics {
+  background-color: defined.$red;
+}
+.card__image {
+  border-radius: 20px;
+  height: 200px;
+  width: 150px;
 }

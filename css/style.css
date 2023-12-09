@@ -138,6 +138,47 @@
   padding: 20px;
   line-height: 1.5;
   border-radius: 10px;
+  margin-top: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 300px;
+  align-items: center;
+  grid-auto-flow: dense;
+}
+@media screen and (min-width: 990px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.illustration {
+  background-color: #011e32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 990px) {
+  .illustration--different {
+    grid-column: 2;
+  }
+}
+.illustration__img--different {
+  display: inline-block;
+  position: relative;
+}
+
+.illustration__img {
+  max-width: 30%;
+}
+
+.description {
+  padding: 50px 70px;
 }
 
 html {
@@ -159,7 +200,6 @@ body {
   background-color: #011e32;
   color: white;
   padding: 20px;
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 990px) {
   .banner {
@@ -173,4 +213,32 @@ body {
 
 .banner__header {
   text-align: center;
+}
+
+.hero {
+  height: 50vh;
+  background-image: url(/images/hero-image.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.intro {
+  margin: 50px;
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .intro {
+    max-width: 70%;
+    text-align: left;
+  }
+}
+
+.topics {
+  background-color: #c01007;
+}
+
+.card__image {
+  border-radius: 20px;
+  height: 200px;
+  width: 150px;
 }/*# sourceMappingURL=style.css.map */

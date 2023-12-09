@@ -1,0 +1,43 @@
+@use "defined";
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 300px;
+  align-items: center;
+  grid-auto-flow: dense;
+
+  @media screen and (min-width: 990px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.illustration {
+  background-color: defined.$blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  // padding: 50px;
+}
+
+@media screen and (min-width: 990px) {
+  .illustration--different {
+    grid-column: 2;
+  }
+}
+
+.illustration__img--different {
+  display: inline-block;
+  position: relative;
+  //   bottom: -54px;
+}
+
+.illustration__img {
+  max-width: 30%;
+}
+
+.description {
+  padding: 50px 70px;
+}
