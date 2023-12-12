@@ -52,4 +52,26 @@
       <p>© 2023 Everything Norway</p>
     </footer>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Create the ordered list
+      var toc = "<ul>";
+
+      document
+        .querySelectorAll("article h1, article h2, article h3")
+        .forEach(function (element) {
+          var ref = element.id;
+          var title = element.textContent || element.innerText;
+
+          // Add list item
+          toc += "<li><a href='#" + ref + "'>" + title + "</a></li>";
+        });
+
+      // Close the ordered list
+      toc += "</ul>";
+
+      // Now insert the HTML into the #table-of-contents div
+      document.getElementById("table-of-contents").innerHTML = toc;
+    });
+  </script>
 </html>

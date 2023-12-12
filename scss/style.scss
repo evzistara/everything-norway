@@ -3,6 +3,8 @@
 @use "footer";
 @use "about";
 @use "topic-page";
+@use "article";
+@use "node_modules/tocbot/src/scss/tocbot";
 
 // Break points:
 // Mobile: 640px
@@ -52,7 +54,7 @@ body {
   text-align: center;
 
   @media screen and (min-width: 900px) {
-    max-width: 70%;
+    max-width: 60%;
     text-align: left;
     padding: 100px 50px;
   }
@@ -65,13 +67,14 @@ body {
 
 .heading {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .flexbox {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 // TEST
@@ -120,4 +123,12 @@ body {
   .card:hover .card__content {
     transform: translateY(0);
   }
+}
+.articles {
+  padding: 30px;
+}
+
+.article__image {
+  max-width: 400px;
+  height: 250px;
 }

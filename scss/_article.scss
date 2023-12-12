@@ -1,0 +1,42 @@
+@use "defined";
+
+#table-of-contents {
+  background-color: defined.$blue;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+
+  //   position: fixed; /* Or style as you prefer */
+  //   left: 0;
+  //   top: 0;
+  //   width: 200px; /* Or as needed */
+  //   height: 100%;
+  //   overflow: auto;
+}
+
+@media screen and (min-width: 990px) {
+  .flexbox__article {
+    display: flex;
+  }
+  #table-of-contents {
+    width: 30%;
+    height: 100vh;
+  }
+}
+#table-of-contents ul {
+  padding: 0;
+}
+#table-of-contents li {
+  margin: 10px;
+  list-style-type: none;
+}
+
+#table-of-contents a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.article {
+  padding: 30px;
+}

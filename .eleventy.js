@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("css");
 
+  eleventyConfig.addPassthroughCopy("tocbot.min.js");
+
   return {
     // možné formáty šablon
 
