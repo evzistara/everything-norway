@@ -4,7 +4,6 @@
 @use "about";
 @use "topic-page";
 @use "article";
-@use "node_modules/tocbot/src/scss/tocbot";
 
 // Break points:
 // Mobile: 640px
@@ -24,6 +23,9 @@ html {
 body {
   font-size: 16px;
   margin: 0;
+  font-family: defined.$text;
+  font-weight: 200;
+  line-height: 1.5;
 }
 .banner {
   background-color: defined.$blue;
@@ -44,23 +46,41 @@ body {
 
 .hero {
   height: 50vh;
-  background-image: url(/images/hero-image.jpg);
+  background-image: url(/images/hero2.jpg);
   background-size: cover;
   background-position: center;
 }
+.hero__heading {
+  font-family: defined.$heading;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 3px 3px 2px defined.$blue;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
 
-.intro {
-  margin: 50px;
+.introduction__text {
   text-align: center;
+  padding: 50px;
 
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 990px) {
     max-width: 60%;
     text-align: left;
-    padding: 100px 50px;
+    padding: 80px 50px;
   }
 }
 
-.topics {
+.section {
+  padding: 30px;
+}
+
+.intro__image .topics {
   background-color: defined.$red;
   padding: 30px;
 }
@@ -68,6 +88,20 @@ body {
 .heading {
   text-align: center;
   margin-bottom: 50px;
+  font-family: defined.$heading;
+  font-size: 2rem;
+}
+.heading--left {
+  text-align: left;
+}
+
+.introduction__illustration {
+  width: 100%;
+  text-align: center;
+}
+
+.introduction__image {
+  width: 60%;
 }
 
 .flexbox {
@@ -77,8 +111,12 @@ body {
   justify-content: space-around;
 }
 
-// TEST
-
+@media screen and (min-width: 990px) {
+  .nowrap {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
 .card {
   border-radius: 10px 10px 0 0;
   height: 360px;
@@ -91,13 +129,16 @@ body {
 
 .card__content {
   color: white;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   padding: 20px;
   height: 100%;
   border-radius: 20px;
   display: flex;
   align-items: center;
   text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .card__link {
@@ -109,6 +150,8 @@ body {
   padding: 10px;
   text-align: center;
   margin-top: 10px;
+  font-family: defined.$heading;
+  font-size: 1.2rem;
 }
 
 @media (hover) {
@@ -123,9 +166,6 @@ body {
   .card:hover .card__content {
     transform: translateY(0);
   }
-}
-.articles {
-  padding: 30px;
 }
 
 .article__image {
