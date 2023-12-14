@@ -297,7 +297,7 @@ body {
 }
 
 .section {
-  padding: 30px;
+  padding: 30px 50px 100px 50px;
 }
 
 .intro__image .topics {
@@ -343,7 +343,7 @@ body {
   height: 360px;
   width: 250px;
   margin-bottom: 0px;
-  background-image: url(/images/moving.png);
+  border-radius: 20px;
   background-size: cover;
   border-radius: 20px;
 }
@@ -360,6 +360,27 @@ body {
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+.moving {
+  background-image: url(/images/moving.png);
+}
+
+.housing {
+  background-image: url(/images/housing.png);
+}
+
+.career {
+  background-image: url(/images/career.png);
+  background-position: center;
+}
+
+.language {
+  background-image: url(/images/language.png);
+}
+
+.lifestyle {
+  background-image: url(/images/lifestyle.png);
 }
 
 .card__link {
@@ -387,7 +408,22 @@ body {
     transform: translateY(0);
   }
 }
-.article__image {
-  max-width: 400px;
-  height: 250px;
+.article {
+  width: 400px;
+  height: 200px;
+  background-color: #011e32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.article__link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.article__link:hover {
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
