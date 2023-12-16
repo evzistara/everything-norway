@@ -64,25 +64,24 @@
     </footer>
   </body>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Create the ordered list
-      var toc = "<ul>";
+   document.addEventListener("DOMContentLoaded", function () {
+    // Create the unordered list
+    var toc = "<ul>";
 
-      document
-        .querySelectorAll("article h1, article h2, article h3")
-        .forEach(function (element) {
-          var ref = element.id;
-          var title = element.textContent || element.innerText;
+    document
+      .querySelectorAll("article h1, article h2, article h3")
+      .forEach(function (element) {
+        var ref = element.id;
 
-          // Add list item
-          toc += "<li><a href='#" + ref + "'>" + title + "</a></li>";
-        });
+        // Add list item using the heading's id as the text
+        toc += "<li><a href='#" + ref + "'>" + ref + "</a></li>";
+      });
 
-      // Close the ordered list
-      toc += "</ul>";
+    // Close the unordered list
+    toc += "</ul>";
 
-      // Now insert the HTML into the #table-of-contents div
-      document.getElementById("table-of-contents").innerHTML = toc;
-    });
+    // Now insert the HTML into the #table-of-contents div
+    document.getElementById("table-of-contents").innerHTML = toc;
+});
   </script>
 </html>

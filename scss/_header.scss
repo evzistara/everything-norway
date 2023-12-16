@@ -24,7 +24,6 @@
 .menu {
   order: 1;
   margin-top: 10px;
-  // width: 50%;
 }
 .menu__checkbox {
   position: absolute;
@@ -64,7 +63,6 @@
     display: flex;
     justify-content: space-around;
     background-color: white;
-    position: sticky;
   }
   .menu__item {
     border-bottom: 0;
@@ -76,8 +74,6 @@
   }
 
   .header {
-    //   display: flex;
-    //   justify-content: space-between;
     padding: 0;
   }
   .header__logo {

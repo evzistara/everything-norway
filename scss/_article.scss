@@ -12,33 +12,37 @@
     display: flex;
   }
   #table-of-contents {
-    width: 20%;
-    height: 100vh;
+    width: 40%;
   }
 }
 #table-of-contents ul {
   padding: 0;
+  margin: 0;
 }
 #table-of-contents li {
-  margin: 10px;
-  list-style-type: none;
+  margin: 20px;
+  list-style: none;
 }
 
 #table-of-contents a {
   color: white;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .article {
-  padding: 30px;
+  padding: 30px 50px;
 }
 
 .article__heading {
   font-family: defined.$heading;
 }
 
-.article p {
+.article p,
+.article li {
   font-size: 1.2rem;
 }
