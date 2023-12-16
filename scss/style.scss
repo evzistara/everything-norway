@@ -78,6 +78,7 @@ body {
 
 .section {
   padding: 30px 50px 100px 50px;
+  width: 100%;
 }
 
 .intro__image .topics {
@@ -185,13 +186,14 @@ body {
 }
 
 .news {
-  width: 400px;
+  width: calc(100%-30px / 3);
   height: 200px;
   background-color: defined.$blue;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 10px;
 }
 
 .news__link {

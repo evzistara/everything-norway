@@ -412,13 +412,14 @@ body {
   }
 }
 .news {
-  width: 400px;
+  width: 33.3333333333%;
   height: 200px;
   background-color: #011e32;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 10px;
 }
 
 .news__link {
