@@ -223,6 +223,10 @@
   font-family: "Kalnia", serif;
 }
 
+.article__sub-heading {
+  padding-left: 20px;
+}
+
 .article p,
 .article li {
   font-size: 1.2rem;
@@ -412,7 +416,7 @@ body {
   }
 }
 .news {
-  width: 33.3333333333%;
+  width: 400px;
   height: 200px;
   background-color: #011e32;
   display: flex;
